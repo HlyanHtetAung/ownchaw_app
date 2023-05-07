@@ -1,3 +1,10 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.home_background_image {
+  background-image: url('https://images.hdqwalls.com/wallpapers/skull-dark-astronaut-gd.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
