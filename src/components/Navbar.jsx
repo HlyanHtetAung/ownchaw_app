@@ -8,9 +8,11 @@ const Navbar = () => {
       <div
         className={`${PRE_STYLES.center_div} py-[18px] flex items-center justify-between`}
       >
-        <h3 className="font-bold text-white text-xl">Astrological Reading</h3>
+        <Link to="/">
+          <h3 className="font-bold text-white text-xl">Astrological Reading</h3>
+        </Link>
         <div className="flex gap-[20px] text-white font-semibold">
-          <Link to="/article">
+          <Link to="/articles">
             <p>Articles</p>
           </Link>
           <Link to="/login">

@@ -1,6 +1,8 @@
 import { Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
 import Navbar from './components/Navbar';
+import ArticleDetail from './pages/ArticleDetail';
+import Articles from './pages/Articles';
 
 function App() {
   return (
@@ -9,6 +11,8 @@ function App() {
       <Routes>
         <Route path="/">
           <Route index element={<Home />} />
+          <Route path="article/:articleId" element={<ArticleDetail />} />
+          <Route path="articles" element={<Articles />} />
           {/* <Route path="aboutUs" element={<AboutUs />} />
           <Route path="classes" element={<ClientClasses />} />
           <Route
