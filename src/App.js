@@ -5,6 +5,7 @@ import ArticleDetail from './pages/ArticleDetail';
 import Articles from './pages/Articles';
 import Login from './pages/Login';
 import QuestionLists from './pages/QuestionLists';
+import Astrologers from './pages/Astrologers';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
           <Route index element={<Home />} />
           <Route path="article/:articleId" element={<ArticleDetail />} />
           <Route path="articles" element={<Articles />} />
+          <Route path="astrologers" element={<Astrologers />} />
           <Route path="login" element={<Login />} />
           <Route path="questionsList" element={<QuestionLists />} />
         </Route>

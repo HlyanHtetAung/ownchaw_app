@@ -12,6 +12,9 @@ const Navbar = () => {
           <h3 className="font-bold text-white text-xl">Astrological Reading</h3>
         </Link>
         <div className="flex gap-[20px] text-white font-semibold">
+          <Link to="/astrologers">
+            <p>Astrologers</p>
+          </Link>
           <Link to="/articles">
             <p>Articles</p>
           </Link>

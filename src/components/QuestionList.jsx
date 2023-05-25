@@ -1,6 +1,11 @@
 import React, { useState } from 'react';
 
-const QuestionList = () => {
+const QuestionList = ({
+  questionOwner,
+  questionOwnerId,
+  questionDate,
+  question,
+}) => {
   const [inputValue, setInputValue] = useState('');
 
   const answerQuestionHandle = () => {
