@@ -12,8 +12,13 @@ const InputTextBox = ({
       <input
         className="w-full outline-none px-[10px] py-[10px] bg-slate-500 rounded-md text-white"
         type={inputType}
-        value={inputStateValue}
-        onChange={(e) => inputSetStateFunc(label, e.target.value)}
+        value={inputType === 'file' ? null : inputStateValue}
+        onChange={(e) =>
+          inputSetStateFunc(
+            label,
+            inputType === 'file' ? e.target.files[0] : e.target.value
+          )
+        }
       />
     </div>
   );

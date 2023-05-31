@@ -1,6 +1,11 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-const Article = () => {
+const Article = ({ astrologerId, articleIntro, articleBody }) => {
+  const [html, setHtml] = useState('');
+  useEffect(() => {
+    setHtml(articleBody);
+  }, [html]);
+
   return (
     <Link to="/article/1">
       <div className="flex flex-col lg:flex-row gap-[10px] md:gap-[20px] justify-between mt-[20px] cursor-pointer rounded-md p-[15px] hover:bg-slate-200">
@@ -11,13 +16,8 @@ const Article = () => {
         />
         <div className="flex-1">
           <h2 className="font-bold text-[23px]">Title</h2>
-          <p className="text-slate-500 font-normal leading-8">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
-            aut rem harum. Tempora earum nam at perspiciatis quam sunt, iste
-            quod saepe deleniti qui vero dolorum quisquam delectus ad voluptas
-            consequatur culpa officia quaerat aperiam possimus deserunt
-            voluptatum quia voluptatem.
-          </p>
+          <p>{articleIntro}</p>
+          {/* <div dangerouslySetInnerHTML={{ __html: html }}></div> */}
         </div>
       </div>
     </Link>

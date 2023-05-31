@@ -6,6 +6,8 @@ import Articles from './pages/Articles';
 import Login from './pages/Login';
 import QuestionLists from './pages/QuestionLists';
 import Astrologers from './pages/Astrologers';
+import SignUp from './pages/SignUp';
+import CreateArtilce from './pages/CreateArtilce';
 
 function App() {
   return (
@@ -18,7 +20,9 @@ function App() {
           <Route path="articles" element={<Articles />} />
           <Route path="astrologers" element={<Astrologers />} />
           <Route path="login" element={<Login />} />
+          <Route path="signUp" element={<SignUp />} />
           <Route path="questionsList" element={<QuestionLists />} />
+          <Route path="createArticle" element={<CreateArtilce />} />
         </Route>
       </Routes>
     </div>
