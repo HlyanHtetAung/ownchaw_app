@@ -1,13 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-const Article = ({ astrologerId, articleIntro, articleBody }) => {
-  const [html, setHtml] = useState('');
-  useEffect(() => {
-    setHtml(articleBody);
-  }, [html]);
-
+const Article = ({ articleId, astrologerId, articleIntro, articleBody }) => {
   return (
-    <Link to="/article/1">
+    <Link to={`/article/${articleId}`}>
       <div className="flex flex-col lg:flex-row gap-[10px] md:gap-[20px] justify-between mt-[20px] cursor-pointer rounded-md p-[15px] hover:bg-slate-200">
         <img
           className="w-[400px] max-h-[250px] object-cover"

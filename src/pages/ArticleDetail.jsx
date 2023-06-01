@@ -1,10 +1,30 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { PRE_STYLES } from '../styles';
 import { useParams } from 'react-router-dom';
 
 const ArticleDetail = () => {
   const { articleId } = useParams();
-  console.log(articleId);
+  const [article, setArticle] = useState('');
+
+  const [html, setHtml] = useState('');
+  useEffect(() => {
+    
+  }, [html]);
+
+  useEffect(() => {
+    const fetchArticle = async () => {
+      const res = await fetch(`http://localhost:3001/articles/${articleId}`);
+      const data = await res.json();
+
+      setArticle(data.articles[0]);
+      setHtml(articleBody);
+    };
+
+    fetchArticle();
+  }, [articleId]);
+
+  console.log(article);
+
   return (
     <div className={`${PRE_STYLES.center_div} ${PRE_STYLES.padding_y}`}>
       <h3 className="text-black text-[30px] font-bold">Horoscope</h3>

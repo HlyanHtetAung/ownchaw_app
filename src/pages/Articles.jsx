@@ -24,6 +24,7 @@ const Articles = () => {
       {articles?.map((arc) => (
         <Article
           key={arc.artical_id}
+          articleId={arc.artical_id}
           astrologerId={arc.astrologer_id}
           articleIntro={arc.artical_intro}
           articleBody={arc.artical_body}
